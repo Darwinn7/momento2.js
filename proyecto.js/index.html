@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Bancario</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; }
+        input, select, button { width: 100%; padding: 8px; margin-bottom: 10px; }
+        button { background-color: #4CAF50; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #45a049; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema Bancario</h1>
+        <div id="login">
+            <h2>Iniciar Sesión</h2>
+            <input type="text" id="usuario" placeholder="Usuario">
+            <input type="password" id="contrasena" placeholder="Contraseña">
+            <button onclick="iniciarSesion()">Iniciar Sesión</button>
+        </div>
+        <div id="operaciones" style="display: none;">
+            <h2>Operaciones</h2>
+            <button onclick="mostrarFormulario('crearCliente')">Crear Cliente</button>
+            <button onclick="mostrarFormulario('crearCuenta')">Crear Cuenta</button>
+            <button onclick="mostrarFormulario('realizarTransaccion')">Realizar Transacción</button>
+            <button onclick="mostrarFormulario('consultarSaldo')">Consultar Saldo</button>
+            <button onclick="cerrarSesion()">Cerrar Sesión</button>
+        </div>
+        <div id="formularios">
+            <!-- Los formularios se generarán dinámicamente aquí -->
+        </div>
+    </div>
+    <script src="cliente.js"></script>
+    <script src="cuenta.js"></script>
+    <script src="cuentaCorriente.js"></script>
+    <script src="cuentaAhorros.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
